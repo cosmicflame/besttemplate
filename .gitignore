@@ -1,3 +1,4 @@
+# Node
 lib-cov
 *.seed
 *.log
@@ -12,3 +13,14 @@ logs
 results
 
 npm-debug.log
+
+# IntelliJ
+.idea/
+*.iml
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
