@@ -2,7 +2,7 @@ var fs = require('fs')
 var _ = require('underscore')
 
 module.exports.attachHandlers = function(app) {
-	var files = fs.readdirSync('./routes')
+	var files = fs.readdirSync(__dirname)
 	var routes = _.reject(files, function(file) {
 		return file === 'index.js'
 	})
