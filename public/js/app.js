@@ -1,15 +1,15 @@
 define([
 	'config'
-	, 'app/app'
+	, 'app/pages'
 	, 'app/router'
 	, 'app/views/navigation'
 	, 'backbone'
 	, 'jquery'
 	, 'bootstrap'
-], function (config, App, router, Navigation, Backbone, $) {
+], function (config, Pages, router, Navigation, Backbone, $) {
 
 	//Create main app
-	this.app = new App({
+	this.app = new Pages({
 		el: $('.app')
 	}).render()
 
