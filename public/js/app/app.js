@@ -3,9 +3,7 @@
 	, "underscore"
 	, 'app/router'
 	, 'app/views/splashscreen'
-	, 'app/views/ajaxloader'
-	, 'app/views/quine'
-], function(Backbone, _, Router, Splashscreen, AjaxLoader, Quine) {
+], function(Backbone, _, Router, Splashscreen) {
 
 	return Backbone.View.extend({
 
@@ -18,18 +16,6 @@
 					, route: "splashscreen"
 					, icon: 'icon-home'
 					, label: 'pages.splashscreen'
-				},
-				{
-					view: new AjaxLoader()
-					, route: 'ajaxloader'
-					, icon: 'icon-cog'
-					, label: 'pages.ajaxloader'
-				},
-				{
-					view: new Quine()
-					, route: 'quine'
-					, icon: 'icon-refresh'
-					, label: 'pages.quine'
 				}
 			]
 		},

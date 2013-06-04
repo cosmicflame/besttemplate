@@ -5,3 +5,10 @@
 <p>
 	Hello World in this locale is: <%=i18n['hello'] %>
 </p>
+
+<p>
+	<% if (remoteConfig.loaded) { %>
+	Here is some data that was loaded from the Node.js config file:
+	<%= remoteConfig.get('dataToShareWithClient') %>
+	<% } %>
+</p>

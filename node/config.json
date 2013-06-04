@@ -1,6 +1,12 @@
 {
-	"webserver": {
+	"server": {
 		  "port": 8080
-		, "dir": "../public"
+		, "dev-dir": "../public"
+		, "prod-dir": "../target"
+		, "profile": "dev"
+	}
+
+	, "public": {
+		"dataToShareWithClient": "Hello from the server!"
 	}
 }
