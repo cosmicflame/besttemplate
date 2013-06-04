@@ -10,7 +10,7 @@
 		, 'backbone'
 		, 'jquery'
 		, 'bootstrap'
-	], function (config, App, Router, Navigation, Backbone, $) {
+	], function (config, App, router, Navigation, Backbone, $) {
 
 		//Create main app
 		this.app = new App({
@@ -23,7 +23,7 @@
 		}, {pages: this.app.pages}).render()
 
 		//Create router
-		this.router = new Router(this.app.pages)
+		this.router = router
 		Backbone.history.start()
 
 		//If we're not on a page yet, default to the Splashscreen page

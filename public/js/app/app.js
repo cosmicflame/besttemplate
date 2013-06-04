@@ -3,7 +3,7 @@
 	, "underscore"
 	, 'app/router'
 	, 'app/views/splashscreen'
-], function(Backbone, _, Router, Splashscreen) {
+], function(Backbone, _, router, Splashscreen) {
 
 	return Backbone.View.extend({
 
@@ -18,6 +18,10 @@
 					, label: 'pages.splashscreen'
 				}
 			]
+
+			router.on('route:navigateToPage', _.bind(function(page) {
+				this.navigateToPage(page)
+			}, this))
 		},
 
 		render: function() {
@@ -27,6 +31,20 @@
 				page.view.$el.hide()
 			}, this))
 			return this
+		},
+
+		navigateToPage: function(pageName) {
+			var page = _.find(this.pages, function(page) {
+				return page.route === pageName
+			})
+
+			if (page) {
+				if (this.currentPage) {
+					this.currentPage.view.$el.hide()
+				}
+				this.currentPage = page
+				page.view.$el.show()
+			}
 		}
 	})
 });

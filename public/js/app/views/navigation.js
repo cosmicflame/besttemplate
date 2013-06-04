@@ -1,11 +1,11 @@
 ; define([
-	"backbone"
+	  "backbone"
 	, "underscore"
-	, 'pubsub'
-	, "text!templates/navigation.html"
+	, "app/router"
 	, 'config'
+	, "text!templates/navigation.html"
 	, 'i18n!i18n/nls/bundle'
-], function(Backbone, _, pubsub, template, config, i18n) {
+], function(Backbone, _, router, config, template, i18n) {
 
 	return Backbone.View.extend({
 
@@ -20,7 +20,9 @@
 			}
 
 			_.bindAll(this, 'selectPage')
-			pubsub.sub('navigate:page', this.selectPage)
+			router.on('route:navigateToPage', _.bind(function(page) {
+				this.selectPage(page)
+			}, this))
 		},
 
 		render: function() {
