@@ -8,11 +8,16 @@ nconf.argv()
      .env()
      .file({ file: __dirname + "/config.json" })
 
-var profile = nconf.get('server:profile')
-var publicDir = __dirname + "/" + nconf.get('server:' + profile + '-dir')
-
 // Setup
 var app = express();
+
+// Check if we're getting NODE_ENV from another source (e.g. argv, config file)
+var env = nconf.get('NODE_ENV')
+if (env) app.settings.env = env
+
+// Use environment to select static files directory
+var profile = app.settings.env
+var publicDir = __dirname + "/" + nconf.get('server:directory:' + profile)
 
 // Configure
 app.configure(function() {

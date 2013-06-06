@@ -1,9 +1,10 @@
 {
 	"server": {
 		  "port": 8080
-		, "dev-dir": "../public"
-		, "prod-dir": "../target"
-		, "profile": "dev"
+		, "directory": {
+			  "development": "../public"
+			, "production": "../target"
+		}
 	}
 
 	, "public": {
