@@ -1,6 +1,6 @@
 // Imports
 var express = require('express')
-var config = require('./config.json')
+var config = require('./config/config.json')
 var nconf = require('nconf')
 
 // Set up nconf
