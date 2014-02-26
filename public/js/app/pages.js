@@ -27,8 +27,9 @@
 		render: function() {
 			//Render each child page
 			_.each(this.pages, _.bind(function(page) {
-				this.$el.append(page.view.render().$el)
+				page.view.render()
 				page.view.$el.hide()
+				this.$el.append(page.view.$el)
 			}, this))
 			return this
 		},

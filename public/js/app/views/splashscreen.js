@@ -23,7 +23,6 @@
 				, i18n: i18n
 				, remoteConfig: remoteConfig
 			}));
-			return this
 		}
 	})
 });
