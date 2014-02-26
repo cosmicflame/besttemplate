@@ -12,6 +12,7 @@ pids
 logs
 results
 */node_modules/*
+node_modules/*
 
 npm-debug.log
 
@@ -27,4 +28,4 @@ Desktop.ini
 .DS_Store
 
 # r.js
-target/*
+webapp_target/*

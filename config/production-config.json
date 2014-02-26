@@ -1,0 +1,6 @@
+{
+	"server": {
+		"port": 8081,
+		"webappDirectory": "webapp_target"
+	}
+}

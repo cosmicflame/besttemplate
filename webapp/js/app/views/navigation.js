@@ -31,7 +31,6 @@
 				, config: config
 				, pages: this.pages
 			}))
-			return this
 		},
 
 		selectPage: function(page) {
