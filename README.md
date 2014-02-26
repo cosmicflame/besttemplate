@@ -23,7 +23,8 @@ Access the website on localhost:8080
 
 Building:
 ---------
-`scripts/build.bat`
+- `cd scripts`
+- `./build.bat`
 This will run r.js to minify the JavaScript and CSS.
 
 Running with the minified code:
