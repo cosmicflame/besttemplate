@@ -23,5 +23,5 @@ routes.attachHandlers(app)
 // Start
 var port = nconf.get('PORT') || nconf.get('server:port')
 app.listen(port, function() {
-	console.log("Listening on " + port + " and serving files from " + publicDir)
+	console.log("Listening on " + port + " and serving files from " + publicDir + ' in ' + nconf.get('NODE_ENV') + ' mode')
 })
