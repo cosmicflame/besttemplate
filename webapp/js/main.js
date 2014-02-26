@@ -3,7 +3,7 @@ require([
 	'require-config'
 ], function(conf) {
 
-	require(['app'], function(App) {
-		new App()
+	require(['app'], function(app) {
+		// This function left deliberately blank - app executes at require-time.
 	})
 })
