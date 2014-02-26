@@ -4,7 +4,8 @@
 	dir: "../webapp_target",
 	modules: [
 		{
-			name: "main"
+			name: "main",
+			include: ['require-config', 'app']
 		}
 	]
 	, mainConfigFile: '../webapp/js/require-config.js'
